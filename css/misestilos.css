@@ -3,7 +3,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Estilos para el Hero Section */
+
 .hero-section {
     background: linear-gradient(rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.8), rgba(44, 83, 100, 0.8)), 
                 url('/img/backround.jpg') no-repeat center center;
@@ -12,11 +12,11 @@ body {
     min-height: 500px;
 }
 
-/* Animación sutil para las tarjetas de la galería */
+
 .custom-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    border-top: 4px solid #b48c36; /* Borde superior cambiado a dorado */
+    border-top: 4px solid #b48c36; 
 }
 
 .custom-card:hover {
@@ -24,39 +24,35 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
 }
 
-/* Personalización del formulario de contacto */
+
 .custom-form input:focus, .custom-form textarea:focus, .form-control:focus {
-    border-color: #b48c36 !important; /* Borde dorado al hacer clic */
-    box-shadow: 0 0 0 0.25rem rgba(180, 140, 54, 0.25) !important; /* Sombra dorada al hacer clic */
+    border-color: #b48c36 !important; 
+    box-shadow: 0 0 0 0.25rem rgba(180, 140, 54, 0.25) !important; 
 }
 
-/* Uniformar tamaño de las fotos en las tarjetas */
+
 .card-img-top {
     height: 400px; 
     object-fit: cover; 
     object-position: top; 
 }
 
-/* =========================================
-   CAMBIO DEL COLOR AZUL (PRIMARY) BOOTSTRAP
-   ========================================= */
 
-/* 1. Textos e íconos (.text-primary) */
 .text-primary {
     color: #b48c36 !important; 
 }
 
-/* 2. Botones sólidos (.btn-primary) */
+
 .btn-primary {
     background-color: #b48c36 !important;
     border-color: #b48c36 !important;
 }
 .btn-primary:hover {
-    background-color: #927026 !important; /* Un tono ligeramente más oscuro al pasar el mouse */
+    background-color: #927026 !important; 
     border-color: #927026 !important;
 }
 
-/* 3. Botones con contorno (.btn-outline-primary) */
+
 .btn-outline-primary {
     color: #b48c36 !important;
     border-color: #b48c36 !important;

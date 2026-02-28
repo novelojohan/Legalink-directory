@@ -118,24 +118,24 @@
 
 <script type="text/javascript">
     $(function(){
-        // 1. Cuando la ventana emergente se va a abrir...
+        
         $('#contactoModal').on('show.bs.modal', function (event) {
-            // Buscamos qué botón la abrió
+            
             var button = $(event.relatedTarget);
-            // Extraemos el nombre del abogado
+            
             var nombreAbogado = button.data('abogado');
             
-            // Actualizamos la ventana con el nombre
+           
             var modal = $(this);
             modal.find('.modal-title').text('Contactar a ' + nombreAbogado);
             modal.find('#modalAbogado').val(nombreAbogado);
             
-            // Limpiamos mensajes anteriores por si ya la habían abierto
+            
             $('#modalResultado').html('');
             $('#frmContactoModal')[0].reset();
         });
 
-        // 2. Cuando le dan a "Enviar" en la ventana emergente
+        
         $("#frmContactoModal").submit(function(e){
             e.preventDefault(); 
             
@@ -149,7 +149,7 @@
                 return false;
             }
             
-            // Mensaje de éxito
+          
             $("#modalResultado").html(`
                 <div class="alert alert-success mt-3 text-start">
                     <i class="fa-solid fa-check-circle me-2"></i>
@@ -157,7 +157,7 @@
                 </div>
             `);
             
-            // Limpiamos solo los datos del cliente
+        
             $("#modalNombre").val('');
             $("#modalEmail").val('');
             $("#modalMensaje").val('');

@@ -139,7 +139,7 @@
 
 <script type="text/javascript">
     $(function(){
-        // 1. Cuando la ventana emergente se va a abrir...
+        
         $('#contactoModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var nombreAbogado = button.data('abogado');
@@ -152,7 +152,7 @@
             $('#frmContactoModal')[0].reset();
         });
 
-        // 2. Cuando le dan a "Enviar" en la ventana emergente
+        
         $("#frmContactoModal").submit(function(e){
             e.preventDefault(); 
             

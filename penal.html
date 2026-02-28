@@ -41,7 +41,7 @@
             
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm custom-card">
-                    <img src="./img/joshuaabogado.png" class="card-img-top" alt="Foto" onerror="this.src='https://placehold.co/400x300/EFEFEF/333333?text=Foto+Abogado'">
+                    <img src="./img/joshuaabogado.png" class="card-img-top" alt="Foto" onerror="this.src='https://placehold.co/400x300/EFEFEF/333333?text=+Abogado'">
                     <div class="card-body">
                         <h5 class="card-title">Lic. Joshua De la Vega</h5>
                         <p class="card-text text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span class="text-muted">(67)</span></p>
@@ -141,24 +141,23 @@
 
 <script type="text/javascript">
     $(function(){
-        // 1. Cuando la ventana emergente se va a abrir...
+        
         $('#contactoModal').on('show.bs.modal', function (event) {
-            // Buscamos qué botón la abrió
+           
             var button = $(event.relatedTarget);
-            // Extraemos el nombre del abogado
             var nombreAbogado = button.data('abogado');
             
-            // Actualizamos la ventana con el nombre
+          
             var modal = $(this);
             modal.find('.modal-title').text('Contactar a ' + nombreAbogado);
             modal.find('#modalAbogado').val(nombreAbogado);
             
-            // Limpiamos mensajes anteriores por si ya la habían abierto
+            
             $('#modalResultado').html('');
             $('#frmContactoModal')[0].reset();
         });
 
-        // 2. Cuando le dan a "Enviar" en la ventana emergente
+        
         $("#frmContactoModal").submit(function(e){
             e.preventDefault(); 
             
@@ -172,7 +171,7 @@
                 return false;
             }
             
-            // Mensaje de éxito
+           
             $("#modalResultado").html(`
                 <div class="alert alert-success mt-3 text-start">
                     <i class="fa-solid fa-check-circle me-2"></i>
@@ -180,7 +179,7 @@
                 </div>
             `);
             
-            // Limpiamos solo los datos del cliente
+            
             $("#modalNombre").val('');
             $("#modalEmail").val('');
             $("#modalMensaje").val('');
